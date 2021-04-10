@@ -12,7 +12,7 @@ body {
     flex-direction: column;
 }
 
-a[href="#"] {
+a {
     text-decoration: none;
 }
 
