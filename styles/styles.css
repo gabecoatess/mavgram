@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-size: 10px;
+    background: #DB8E0A;
+    display: flex;
+    flex-direction: column;
+}
+
+a[href="#"] {
+    text-decoration: none;
+}
+
+.thumbnail-image {
+    display: block;
+    width: 100%;
+
+    border-radius: .3em .3em 0 0;
+}
+
+.thumbnail-list {
+    list-style: none;
+    padding: 0;
+
+    white-space: nowrap;
+    overflow-x: auto;
+
+    justify-content: space-between;
+
+    flex: 0 1 auto;
+    order: 2;
+    display: flex;
+}
+
+.detail-image-frame {
+    text-align: center;
+    position: relative;
+    margin-bottom: 1.5em;
+}
+
+.thumbnail-item {
+    display: inline-block;
+    min-width: 120px;
+    max-width: 120px;
+}
+
+.thumbnail-title {
+    display: block;
+    margin: 0;
+    padding: 4px 10px;
+
+    background: #C27E0A;
+    color: #FFA60D;
+
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+
+    border-radius: 0 0 .3em .3em
+}
+
+.logo-text {
+    background: #C27E0A;
+    color: white;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 37px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+
+.detail-image {
+    width: 70%; /* Should be 70% when not on phones */
+    border-radius: 1.3em;
+
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+.main-header {
+    flex: 0 1 auto;
+}
+
+.main-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-image-container {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-image-title {
+    position: absolute;
+    bottom: -12px;
+    left: 200px; 
+    
+    color: white;
+    font-size: 35px;
+    text-shadow: rgba(0,0,0,0.9) 1px 2px 9px;
+    font-family: 'Lobster', sans-serif;
+}
+
+
+/* Other screen sizes */
+
+@media all and (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+        overflow: hidden;
+    }
+    
+    .thumbnail-list {
+        flex-direction: column;
+        order: 0;
+        margin-left: 20px;
+
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    .thumbnail-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .thumbnail-item {
+        max-width: 260px;
+    }
+
+    .thumbnail-item + .thumbnail-item {
+        margin-top: 20px;
+    }
+
+    .detail-image {
+        border-radius: 1.3em;
+        width: 50%;
+    }
+}
